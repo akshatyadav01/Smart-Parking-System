@@ -1,5 +1,4 @@
 import serial
-
 import time
 import datetime as dt
 import mysql.connector as m
@@ -12,15 +11,16 @@ mc=my.cursor()
 ads=serial.Serial('com3',9600)
 time.sleep(1)
 i=1
+
+fid='FT1632'
+sl="12A"
+
 while(True):
     
 
 
     while(ads.in_waiting==0):
         pass
-    
-    fid='FT1632'
-    sl="12A"
 
 
     pack=ads.readline()
